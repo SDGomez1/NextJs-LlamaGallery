@@ -1,14 +1,18 @@
 import styles from "../styles/Gallery.module.css";
 import { LlamaCard } from "../components/LlamaCard";
+import Link from "next/link";
 const Gallery = ({ LlamaInfo }) => {
 	const generateCards = LlamaInfo.map((c) => {
+		const url = `/Llama/${c.nombre.replace(" ", "")}`;
 		return (
-			<LlamaCard
-				key={c.id}
-				title={c.nombre}
-				text={c.ubicacion}
-				Imagesrc={c.imagen}
-			/>
+			<Link href={url}>
+				<LlamaCard
+					key={c.id}
+					title={c.nombre}
+					text={c.ubicacion}
+					Imagesrc={c.imagen}
+				/>
+			</Link>
 		);
 	});
 	return (
