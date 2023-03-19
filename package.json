@@ -20,8 +20,10 @@
   },
   "homepage": "https://github.com/SDGomez1/NextJs-productGallery#readme",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.3",
     "next": "^13.2.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5"
   }
 }
