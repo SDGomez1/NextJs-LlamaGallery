@@ -1,0 +1,18 @@
+.LlamaCard{
+    height: 300px;
+    width: 300px;
+    border: 1px solid #000000;
+    border-radius: 25px;
+}
+.ImageContainer {
+    position: relative;
+    height: 70%;
+    overflow: hidden;
+    border-radius: 25px 25px 0px 0px;
+
+}
+.TextContainer{
+    height: 30%;
+    box-sizing: border-box;
+    padding: 20px;
+}
