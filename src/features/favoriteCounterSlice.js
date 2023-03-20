@@ -15,6 +15,6 @@ export const favoriteCounterSlice = createSlice({
 	},
 });
 
-export const { increment, decrement, amount } = favoriteCounterSlice.actions;
+export const { increment, decrement } = favoriteCounterSlice.actions;
 export const selectCount = (state) => state.counter.value;
 export default favoriteCounterSlice.reducer;

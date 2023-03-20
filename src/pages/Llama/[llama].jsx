@@ -31,7 +31,6 @@ export async function getStaticProps({ params }) {
 }
 
 const LlamaPageGen = ({ data }) => {
-    console.log(data.nombre)
 	return (
         <>
             <LlamaPage

@@ -4,10 +4,11 @@ import Link from "next/link";
 const Gallery = ({ LlamaInfo }) => {
 	const generateCards = LlamaInfo.map((c) => {
 		const url = `/Llama/${c.nombre.replace(" ", "")}`;
+
 		return (
-			<Link href={url}>
+			<Link key={c.id} href={url}>
 				<LlamaCard
-					key={c.id}
+					
 					title={c.nombre}
 					text={c.ubicacion}
 					Imagesrc={c.imagen}
