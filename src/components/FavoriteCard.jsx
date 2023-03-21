@@ -3,6 +3,8 @@ import styles from "../styles/FavoriteCard.module.css";
 import { useDispatch } from "react-redux";
 import { decrement } from "../features/favoriteCounterSlice";
 import { removePage } from "../features/favoritePageSlice";
+import { motion } from "framer-motion";
+import Link from "next/link";
 const FavoriteCard = ({ title, imageSrc, location }) => {
 
 	const dispatch = useDispatch();
@@ -16,8 +18,12 @@ const FavoriteCard = ({ title, imageSrc, location }) => {
 		dispatch(removePage(data));
 		dispatch(decrement());
 	};
+
+	const url = `/Llama/${title.replace(" ", "")}`;
 	return (
+		
 		<div className={styles.Container}>
+			<Link href={url}>
 			<div className={styles.ImageContainer}>
 				<Image
 					src={imageSrc}
@@ -25,12 +31,14 @@ const FavoriteCard = ({ title, imageSrc, location }) => {
 					fill
 				/>
 			</div>
+			</Link>
 			<div className={styles.TextContainer}>
 				<h2>{title}</h2>
 				<p>{location}</p>
-				<button onClick={removeFavorite}> X </button>
+				<motion.button onClick={removeFavorite} whileHover = {{ borderRadius: '60px', rotate: '360deg'}}> X </motion.button>
 			</div>
 		</div>
+		
 	);
 };
 

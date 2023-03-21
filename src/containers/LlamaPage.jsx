@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { decrement, increment } from "../features/favoriteCounterSlice";
 import { addPage, removePage, selectPage } from "../features/favoritePageSlice";
+import { motion } from "framer-motion";
 import styles from "../styles/LlamaPage.module.css";
 
 const LlamaPage = ({ imageSrc, title, location, country, description }) => {
@@ -53,7 +54,7 @@ const LlamaPage = ({ imageSrc, title, location, country, description }) => {
 					<h2>{title}</h2>
 					<p>{location}</p>
 					<p className={styles.Country}>{country}</p>
-					<button onClick={addFavorite}> {favorite}</button>
+					<motion.button onClick={addFavorite} whileTap= {{scale: [1.0, 1.1]}}>  {favorite}</motion.button>
 				</div>
 			</div>
 			<div className={styles.DescriptionContainer}>

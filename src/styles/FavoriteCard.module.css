@@ -37,8 +37,3 @@
 	border: solid 1px black;
 	color: gainsboro;
 }
-.TextContainer > button:hover {
-	border: solid 1px black;
-	color: black;
-	background-color: white;
-}
