@@ -14,6 +14,14 @@
         pais: 'Chile',
         descripcion: 'Esta llama esta bien relajada ',
         imagen: '/img/llamaGlama.jpg'
+    },
+    {
+        id: 3,
+        nombre: 'Llama Colombiana',
+        ubicacion: 'paramo',
+        pais: 'Colombia',
+        descripcion: 'Esta llama esta bien relajada numames y colombiana ',
+        imagen: '/img/llamaColombia.jpeg'
     }
  ]
 export default data

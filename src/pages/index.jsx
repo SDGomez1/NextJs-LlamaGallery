@@ -1,4 +1,3 @@
-import { Navbar } from "../components/Navbar";
 import { Gallery } from "../containers/Gallery";
 
 export async function getStaticProps() {

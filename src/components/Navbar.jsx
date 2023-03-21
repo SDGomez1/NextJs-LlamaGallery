@@ -13,7 +13,9 @@ const Navbar = () => {
 				</Link>
 			</div>
 			<div>
-				<p>Favoritos {counter}</p>
+				<Link href='/Favoritos'>
+					<p>Favoritos ({counter})</p>
+				</Link>
 			</div>
 		</nav>
 	);
