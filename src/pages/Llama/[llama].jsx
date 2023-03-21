@@ -38,6 +38,7 @@ const LlamaPageGen = ({ data }) => {
 			title={data.nombre}
 			location={data.ubicacion}
 			country={data.pais}
+			description={data.descripcion}
 		/>
         
         </>

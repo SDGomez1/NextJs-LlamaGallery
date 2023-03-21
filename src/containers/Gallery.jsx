@@ -21,8 +21,8 @@ const Gallery = ({ LlamaInfo }) => {
 	});
 	return (
 		<section className={styles.Gallery}>
-			<h1>Llama Fans</h1>
-			<h3>llamas for all the people</h3>
+			<h1>Bienvenido a la galeria de fotos de llamas</h1>
+			<h3>Llamas para toda la gente</h3>
 			<div className={styles.GalleryGrid}>{generateCards}</div>
 		</section>
 	);

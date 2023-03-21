@@ -18,7 +18,12 @@ const Favoritos = () => {
 		);
 	});
 
-	return <div className={styles.Container}>{generateCard}</div>;
+	return (
+	<div className={styles.Container}>
+		<h2> Lista de Favoritos</h2>
+		{generateCard}
+		</div>
+	)
 };
 
 export default Favoritos;

@@ -4,3 +4,10 @@
     align-items: center;
     margin-top: 50px;
 }
+
+.Container >h2{
+    text-align: left;
+    width: 700px;
+    margin-bottom: 50px;
+    font-size: 32px;
+}
