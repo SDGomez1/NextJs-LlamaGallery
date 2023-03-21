@@ -10,12 +10,27 @@ const LlamaPage = ({ imageSrc, title, location, country }) => {
 	const dispatch = useDispatch();
 
 	const addFavorite = () => {
-		const id = pages.lastIndexOf(title);
-		if (id != -1) {
-			dispatch(removePage(title));
+		const id = pages.map((c)=>{
+			if (c != undefined)
+			{
+				if (c.nombre == title){
+					return 1
+				} else{
+					return 0
+				}
+			}
+		})
+		const data = {
+			nombre: title,
+			src: imageSrc,
+			pais: country
+		}
+
+		if (id.lastIndexOf(1) != -1) {
+			dispatch(removePage(data));
 			dispatch(decrement());
 		} else {
-			dispatch(addPage(title));
+			dispatch(addPage(data));
 			dispatch(increment());
 		}
 	};

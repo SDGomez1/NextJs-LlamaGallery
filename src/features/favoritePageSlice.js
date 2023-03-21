@@ -15,13 +15,16 @@ export const favoritePageSlice = createSlice({
 			}
 		},
 		removePage: (state, payload) => {
-			state.value = state.value.map((c) => {
-				if (c == payload.payload) {
-					return "";
-				} else {
-					return c;
+			var isContained = state.value.map((c) => {
+				if (c.name == payload.payload.name) {
+					return 1;
 				}
+				return 0;
 			});
+			var index = isContained.lastIndexOf(1);
+			if (index != -1) {
+				state.value.splice(index, 1);
+			}
 		},
 	},
 });

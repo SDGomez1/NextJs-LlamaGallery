@@ -1,21 +1,24 @@
-import { useDispatch } from "react-redux";
-import {removePage} from "../features/favoritePageSlice"
-import {decrement} from"../features/favoriteCounterSlice"
-
-
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { selectPage } from "../features/favoritePageSlice";
+import { FavoriteCard } from "../components/FavoriteCard";
+import styles from "../styles/Favoritos.module.css";
 
 const Favoritos = () => {
-    const dispatch = useDispatch()
-    const removeFavorite = ()=> {
-        dispatch(removePage("Llama glama"))
-                dispatch(decrement());
-    }
-	return (
-		<>
-			<h1>Pagina de favoritos</h1>
-			<button onClick={removeFavorite}>Eliminar de favoritos</button>
-		</>
-	);
+	const pages = useSelector(selectPage);
+
+	const generateCard = pages.map((c, index) => {
+		return (
+			<FavoriteCard
+				key={index}
+				title={c.nombre}
+				imageSrc={c.src}
+				location={c.pais}
+			/>
+		);
+	});
+
+	return <div className={styles.Container}>{generateCard}</div>;
 };
 
 export default Favoritos;
