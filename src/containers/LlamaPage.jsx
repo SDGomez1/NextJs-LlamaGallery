@@ -7,8 +7,22 @@ import { motion } from "framer-motion";
 import styles from "../styles/LlamaPage.module.css";
 
 const LlamaPage = ({ imageSrc, title, location, country, description }) => {
-	const [favorite, setFavorite] = useState("Añadir a Favoritos");
+
 	const pages = useSelector(selectPage);
+	
+	const getInitialState = () => {
+		for(var i = 0; i < pages.length; i++){
+			if(pages[i].nombre == title){
+				return pages[i].favorite
+			}
+			
+		}
+	}
+
+	console.log(getInitialState())
+
+	const [favorite, setFavorite] = useState("Añadir a Favoritos");
+	
 
 	const dispatch = useDispatch();
 
@@ -26,6 +40,7 @@ const LlamaPage = ({ imageSrc, title, location, country, description }) => {
 			nombre: title,
 			src: imageSrc,
 			pais: country,
+			favorite: favorite
 		};
 
 		if (id.lastIndexOf(1) != -1) {

@@ -35,7 +35,7 @@ const FavoriteCard = ({ title, imageSrc, location }) => {
 			<div className={styles.TextContainer}>
 				<h2>{title}</h2>
 				<p>{location}</p>
-				<motion.button onClick={removeFavorite} whileHover = {{ borderRadius: '60px', rotate: '360deg'}}> X </motion.button>
+				<motion.button onClick={removeFavorite} whileHover = {{ borderRadius: '60px'}}> X </motion.button>
 			</div>
 		</div>
 		
