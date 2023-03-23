@@ -1,0 +1,21 @@
+.Footer p {
+	font-weight: bold;
+}
+
+.Footer a {
+	text-decoration: underline;
+}
+.Footer {
+	width: 100%;
+	border-top: solid 1px black;
+	padding-top: 40px;
+	margin: 80px 0px;
+	display: flex;
+	justify-content: space-evenly;
+}
+.Footer div {
+	width: 250px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}

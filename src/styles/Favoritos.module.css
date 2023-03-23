@@ -1,0 +1,24 @@
+.Container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 50px;
+}
+
+.Container > h2 {
+	text-align: left;
+	width: 700px;
+	margin-bottom: 50px;
+	font-size: 32px;
+}
+
+.NoHay {
+	background-color: #fffaf3;
+	color: #573a08;
+	text-align: left;
+	width: 700px;
+	height: 100px;
+	box-sizing: border-box;
+	padding: 20px;
+	box-shadow: inset 0 0 0 1px #c9ba9b, 0 0 0 0 transparent;
+}

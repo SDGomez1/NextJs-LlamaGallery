@@ -1,0 +1,40 @@
+.LlamaCard {
+	display: flex;
+	flex-direction: column;
+	height: 410px;
+	width: 410px;
+	/* 	background: linear-gradient(
+		134.96deg,
+		#88dddd 1.52%,
+		rgba(9, 108, 0, 0.82) 100%
+	); */
+	box-shadow: 0px 24px 48px rgba(0, 0, 0, 0.16);
+	border-radius: 15px;
+	align-items: center;
+	padding-top: 45px;
+	box-sizing: border-box;
+}
+.ImageContainer {
+	position: relative;
+	height: 230px;
+	width: 320px;
+	overflow: hidden;
+	border-radius: 15px;
+}
+.TextContainer {
+	display: flex;
+	width: 320px;
+	flex-direction: column;
+	height: 30%;
+	box-sizing: border-box;
+	padding: 20px 0px 0px 0px;
+	gap: 10px;
+}
+.TextContainer > h4 {
+	padding: 0;
+	margin: 0;
+	font-size: 28px;
+}
+.TextContainer > p {
+	font-size: 14px;
+}

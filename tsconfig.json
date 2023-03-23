@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -15,10 +16,12 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@/*": ["./src/*"],
-      "@Components/*": ["./src/components/*"],
-      "@Styles/*": ["./src/styles/*"],
-      "@Containers/*": ["./src/containers/*"]
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@styles/*": ["src/styles/*"],
+      "@containers/*": ["src/containers/*"],
+      "@database/*": ["src/database/*"],
+      "@features/*": ["src/features/*"]
     },
     "noImplicitAny": true,
     "noImplicitReturns": true
