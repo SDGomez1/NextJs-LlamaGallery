@@ -8,7 +8,7 @@ The objective of this project is to create a Next.js application that demonstrat
 
 1. Clone the repository:
 
-git clone https://github.com/SDGomez1/NextJs-productGallery.git
+git clone https://github.com/SDGomez1/NextJs-LlamaGallery.git
 
 2. Install dependencies:
 
