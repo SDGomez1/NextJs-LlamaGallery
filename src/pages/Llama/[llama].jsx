@@ -1,8 +1,9 @@
 import { LlamaPage } from "../../containers/LlamaPage";
 
-
 export const getStaticPaths = async () => {
-	const response = await fetch("http://localhost:3000/api/llamas");
+	const response = await fetch(
+		"https://next-js-product-gallery.vercel.app/api/llamas"
+	);
 	const data = await response.json();
 
 	const paths = data.map((c) => {
@@ -32,17 +33,15 @@ export async function getStaticProps({ params }) {
 
 const LlamaPageGen = ({ data }) => {
 	return (
-        <>
-            <LlamaPage
-			imageSrc={data.imagen}
-			title={data.nombre}
-			location={data.ubicacion}
-			country={data.pais}
-			description={data.descripcion}
-		/>
-        
-        </>
-		
+		<>
+			<LlamaPage
+				imageSrc={data.imagen}
+				title={data.nombre}
+				location={data.ubicacion}
+				country={data.pais}
+				description={data.descripcion}
+			/>
+		</>
 	);
 };
 
