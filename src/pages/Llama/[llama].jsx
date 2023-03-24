@@ -1,34 +1,42 @@
 import { LlamaPage } from "../../containers/LlamaPage";
 
 export const getStaticPaths = async () => {
-	const response = await fetch(
-		"https://next-js-product-gallery.vercel.app/api/llamas"
-	);
-	const data = await response.json();
+	try {
+		const response = await fetch(
+			"https://next-js-product-gallery.vercel.app/api/llamas"
+		);
+		const data = await response.json();
 
-	const paths = data.map((c) => {
-		return { params: { llama: c.nombre.replace(" ", "") } };
-	});
+		const paths = data.map((c) => {
+			return { params: { llama: c.nombre.replace(" ", "") } };
+		});
 
-	return {
-		// Statically generate all paths
-		paths,
-		// Display 404 for everything else
-		fallback: false,
-	};
+		return {
+			// Statically generate all paths
+			paths,
+			// Display 404 for everything else
+			fallback: false,
+		};
+	} catch (e) {
+		console.log(e);
+	}
 };
 
 export async function getStaticProps({ params }) {
-	const url = `http://localhost:3000/api/${params.llama}`;
-	const response = await fetch(url);
-	const data = await response.json();
+	try {
+		const url = `http://localhost:3000/api/${params.llama}`;
+		const response = await fetch(url);
+		const data = await response.json();
 
-	return {
-		// Passed to the page component as props
-		props: {
-			data,
-		},
-	};
+		return {
+			// Passed to the page component as props
+			props: {
+				data,
+			},
+		};
+	} catch (e) {
+		console.log(e);
+	}
 }
 
 const LlamaPageGen = ({ data }) => {
