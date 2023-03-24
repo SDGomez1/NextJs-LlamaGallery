@@ -1,38 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Llama Gallery Readme
+
+## Objective
+
+The objective of this project is to create a Next.js application that demonstrates the practice of dynamic routing, dynamic API endpoint creation, and state management with React Redux. The application showcases a Llama Gallery and fetches data from a fake database to display information about the Llamas.
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
 
-```bash
+git clone https://github.com/SDGomez1/NextJs-productGallery.git
+
+2. Install dependencies:
+
+npm install
+
+3. Start the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This will start the server on `http://localhost:3000`.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## API Endpoints
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- `/api/llamas` - Returns all the information for all the Llamas.
+- `/api/llama/:name` - Returns the information for a specific Llama with the given `name`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Dynamic Routing and API Endpoint Creation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This project utilizes dynamic routing and dynamic API endpoint creation to display information about each individual Llama. The application fetches data from a fake database and creates dynamic endpoints for each specific Llama. This allows the application to display information about each Llama on its own page.
 
-## Learn More
+## State Management with React Redux
 
-To learn more about Next.js, take a look at the following resources:
+React Redux is used for managing the state of the application. This allows for efficient and predictable updates to the UI as the state changes.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## TypeScript Branch
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+There is a TypeScript branch available for this project. You can switch to it using the following command:
 
-## Deploy on Vercel
+git checkout typeScript
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributors
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Sergio Gomez (https://github.com/SDGomez1) - Main contributor
